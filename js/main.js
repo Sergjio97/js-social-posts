@@ -82,7 +82,7 @@ const posts = [
 for (let i = 0; i < posts.length; i++){
 
     document.querySelector('.posts-list').innerHTML +=
-    
+
     `
 
     <div class="post__header">
@@ -92,9 +92,14 @@ for (let i = 0; i < posts.length; i++){
             </div>
             <div class="post-meta__data">
                 <div class="post-meta__author">${posts[i].author.name}</div>
-                <div class="post-meta__time">4 mesi fa</div>
+                <div class="post-meta__time">${posts[i].created}</div>
             </div>                    
         </div>
+    </div>
+
+    <div class="post__text">${posts[i].content}</div>
+    <div class="post__image">
+        <img src="${posts[i].media}" alt="">
     </div>
 
     `
